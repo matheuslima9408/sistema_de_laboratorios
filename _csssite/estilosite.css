@@ -1,0 +1,549 @@
+@charset"UTF-8";
+
+@font-face{
+font-family:'Fontelogo';
+src:url("../_fontssite/bubblegum-sans-regular.otf");		
+}
+
+
+
+/*Formata��o Style*/
+
+body{
+font-family:Arial, sans-serif;
+background-color:#dddddd; /*COR DE FUNDO DO SITE*/
+color:#000000; /*COR DO TITULO BRACA*/
+}
+
+
+
+/*FORMATA��O INTERFACE, ESPA�O DA MARGEM, COR DE FUNDO E LARGURA DA MARGEM*/
+
+
+p{
+text-align:justify;
+text-indent:50px;
+}
+
+
+
+/*FORMATA��O INTERFACE*/
+
+div#interface{
+width:1150px;
+background-color:#ffffff; /*COR DA INTERFACE DO SITE*/
+margin:-20px auto -20px auto; /*OBS POSIÇÃO DAS LATERAIS */
+box-shadow:0px 0px 10px rgba(0,0,0,.5);
+padding:2px;
+}
+
+
+
+/*FORMATA��O CABE�ALHO E TITULO*/
+header#cabecalho{
+    margin-bottom:0px;
+    border-bottom:1px #606060 solid;
+    height:170px;
+    background:url("../_imagenssite/degrade.jpg"); /*POSICAO IMAGEM DE FUNDO*/
+    /*background-color:#606060; */
+}
+
+header#cabecalho img{
+position:relative;
+width:200px;
+height:150px;
+position:absolute;
+top:30px;
+left:120px;
+}
+
+
+/*FORMATA��O TITULO DO CABE�ALHO*/
+
+header#cabecalho h1{
+        margin-left:400px;                /*POSICAO DO H1*/
+        font-family: Arial, cursive;
+        font-size:30pt;
+        color:#FFFFFF;
+        text-shadow:1px 1px 1px rgba(0,0,0,.6);
+        margin-top: 20px;
+}
+
+
+/*OBS PARA O LAB'S FICAR COR DESEJADA CONFIGURAR O QUE FOR LINK*/
+/*LINK DO LABS*/
+header#cabecalho a{
+text-align:right;
+color:#000000;
+text-decoration:none;
+}
+
+
+
+
+/*SUMIR MARCADORES MENU E POSICAO*/
+
+nav#menu ul{
+list-style:none;
+text-transform:uppercase;
+width:590px;
+position:relative;
+top:60px;
+left:310px;
+}
+
+
+/*Organizar os Itens*/
+/*LINHA VERTICAL, COR DE FUNDO, ESPA�O DA MARGEM DO BOTAO E ESPA�O ENTRE BOT�ES;*/
+
+
+
+nav#menu li{
+        color:#000000;
+        display: inline-block;
+        
+
+        padding:2px;
+        margin:5px;
+        /*PARA NAVEGADORES*/
+
+        /*TRANSITION PARA NAVEGADORES DESATUALIZADOS*/
+
+        transition:background-color 1s;
+        -webkit-transition: background-color 1s;
+        -moz-transition: background-color 1s;
+        -ms-transition: background-color 1s;
+        -o-transition: background-color 1s;
+        transition: background-color 1s;
+}
+
+
+
+/*ESCONDER MENU*/
+
+nav#menu h1{
+display:none;
+}
+
+
+/*RETIRAR A BORDA DO EFEITO MOUSE NO MENU*/
+
+ nav#menu li:hover{
+box-shadow:none;
+} 
+
+
+/*MUDAR A COR DA LETRA DO LINK QUANDO PASSAR O MOUSE*/
+/* TUDO QUE FOR LINK (a)*/
+
+nav#menu a{
+text-align:right;
+color:#000000;
+text-decoration:none;
+}
+
+
+
+/*EFEITO MOUSE NAS LETRAS MENU*/
+
+nav#menu a:hover{
+text-align:right;
+color:#000000;
+text-decoration:underline;
+}
+
+
+
+
+/*FORMATA��O DA SEMANTICA*/
+
+
+section#corpo{
+    display:block;
+    width:770px;
+    float:left;
+    margin-top:5px;
+    padding-right:15px;
+   border-right: 1px solid #606060; /*LINHA*/
+   /*///////////// border-top: 1px solid #606060; */ /*LINHA*/
+}
+
+/*TAMANHO DO CAMPO DO UL 01*/
+ul#album-fotos01{
+    width:700px;
+    margin:0 auto;
+    padding: 50px;
+    overflow: hidden;
+    list-style: none;
+	height:150px;
+}
+
+
+/*TAMANHO DO LI 01*/
+ul#album-fotos01 li{
+    float: left;
+    width:200px;
+    height: 200px;
+    margin: 5px;
+    border: 5px solid #ffffff;
+    background-color: #ffffff;
+    box-shadow:1px 1px 3px rgba(0,0,0,.4);
+	-webkit-transition: all .4s ease-in; /*TEMPO DO ZOOM*/
+	
+    text-align: center;
+    /*TEMPO DO ZOOM*/
+    -webkit-transition: all .4s ease-in;
+    /*TEMPO DO ZOOM PARA NAVEGADORES DESATUALIZADOS*/
+    -moz-transition: all .4s ease-in;
+    -ms-transition: all .4s ease-in;
+
+}
+
+
+
+/*CONFIGURACAO DAS LEGENDAS NAS IMAGENS 01*/
+ul#album-fotos01 li span{
+    opacity:0;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px #000000;
+    background-color: rgba(0,0,0,.3);
+    font-size: 10pt;
+    text-align: center;
+    line-height: 280px;
+    padding:8px;              /**/
+}
+
+
+/*ZOOM PARA FORA*/
+ul#album-fotos01 li:hover{
+	-webkit-transform:scale(1.5);
+	/*PARA NAVEGADORES DESATUALIZADOS*/
+	
+	-moz-transform:scale(1.5);
+	-ms-transform:scale(1.5);
+	-o-transform:scale(1.5);
+
+}
+
+ul#album-fotos01 li:hover span{
+    opacity:1;
+}
+
+
+
+/*FORMATAÇÃO DA IMAGEM 01*/
+
+ul#album-fotos01 li#not01{
+     background:url('../_imagenssite/laboratorio-quimica1.jpg') no-repeat 25px 14px;
+     background-position: 50% 50%; /*CENTRALIZAR A IMAGEM*/
+     background-size: 400px 400px; /*TAMANHO REAL DA IMAGEM*/
+     background-color:#ffffff;
+
+ }
+/*VOLTAR A IMAGEM 01 TAMANHO NORMAL*/
+    ul#album-fotos01 li#not01:hover{
+        background-position: 0px 0px;
+        background-size: 200px 200px;
+    }
+
+
+	ul#album-fotos01 h3{
+	margin-left:280px;
+	color:Green;
+	}
+	
+	
+	/*TAMANHO DO CAMPO DO UL 02*/
+ul#album-fotos02{
+    width:700px;
+    margin:0 auto;
+    padding: 50px;
+    overflow: hidden;
+    list-style: none;
+	height:150px;
+}
+
+
+/*TAMANHO DO LI 02*/
+ul#album-fotos02 li{
+    float: left;
+    width:200px;
+    height: 200px;
+    margin: 5px;
+    border: 5px solid #ffffff;
+    background-color: #ffffff;
+    box-shadow:1px 1px 3px rgba(0,0,0,.4);
+	-webkit-transition: all .4s ease-in; /*TEMPO DO ZOOM*/
+	
+    text-align: center;
+    /*TEMPO DO ZOOM*/
+    -webkit-transition: all .4s ease-in;
+    /*TEMPO DO ZOOM PARA NAVEGADORES DESATUALIZADOS*/
+    -moz-transition: all .4s ease-in;
+    -ms-transition: all .4s ease-in;
+
+}
+
+
+
+/*CONFIGURACAO DAS LEGENDAS NAS IMAGENS 02*/
+ul#album-fotos02 li span{
+    opacity:0;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px #000000;
+    background-color: rgba(0,0,0,.3);
+    font-size: 10pt;
+    text-align: center;
+    line-height: 280px;
+    padding:8px;              /**/
+}
+
+
+/*ZOOM PARA FORA*/
+ul#album-fotos02 li:hover{
+	-webkit-transform:scale(1.5);
+	/*PARA NAVEHADORES DESATUALIZADOS*/
+	
+	-moz-transform:scale(1.5);
+	-ms-transform:scale(1.5);
+	-o-transform:scale(1.5);
+
+}
+
+ul#album-fotos02 li:hover span{
+    opacity:1;
+}
+
+
+/*FORMATAÇÃO DA IMAGEM 02*/
+ul#album-fotos02 li#not02{
+    background:url('../_imagenssite/laboratorio-quimica2.jpg') no-repeat 25px 14px;
+    background-position: 50% 50%; /*CENTRALIZAR A IMAGEM*/
+    background-size: 400px 400px; /*TAMANHO REAL DA IMAGEM*/
+    background-color:#ffffff;
+
+}
+
+
+/*VOLTAR A IMAGEM 02 TAMANHO NORMAL*/
+ul#album-fotos02 li#not02:hover{
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul#album-fotos02 h3{
+	margin-left:280px;
+	color:Green;
+	}
+
+
+
+
+
+/*TAMANHO DO CAMPO DO UL 03*/
+ul#album-fotos03{
+    width:700px;
+    margin:0 auto;
+    padding: 50px;
+    overflow: hidden;
+    list-style: none;
+	height:150px;
+	margin-bottom:10px;
+}
+
+
+/*TAMANHO DO LI 01*/
+ul#album-fotos03 li{
+    float: left;
+    width:200px;
+    height: 200px;
+    margin: 5px;
+    border: 5px solid #ffffff;
+    background-color: #ffffff;
+    box-shadow:1px 1px 3px rgba(0,0,0,.4);
+	-webkit-transition: all .4s ease-in; /*TEMPO DO ZOOM*/
+	
+    text-align: center;
+    /*TEMPO DO ZOOM*/
+    -webkit-transition: all .4s ease-in;
+    /*TEMPO DO ZOOM PARA NAVEGADORES DESATUALIZADOS*/
+    -moz-transition: all .4s ease-in;
+    -ms-transition: all .4s ease-in;
+
+}
+
+
+
+/*CONFIGURACAO DAS LEGENDAS NAS IMAGENS 03*/
+ul#album-fotos03 li span{
+    opacity:0;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px #000000;
+    background-color: rgba(0,0,0,.3);
+    font-size: 10pt;
+    text-align: center;
+    line-height: 280px;
+    padding:8px;              /**/
+}
+
+
+/*ZOOM PARA FORA*/
+ul#album-fotos03 li:hover{
+	-webkit-transform:scale(1.5);
+	/*PARA NAVEHADORES DESATUALIZADOS*/
+	
+	-moz-transform:scale(1.5);
+	-ms-transform:scale(1.5);
+	-o-transform:scale(1.5);
+
+}
+
+ul#album-fotos03 li:hover span{
+    opacity:1;
+}
+
+
+
+
+/*FORMATAÇÃO DA IMAGEM 03*/
+ul#album-fotos03 li#not03{
+    background:url('../_imagenssite/laboratorio-quimica3.jpg') no-repeat 25px 14px;
+    background-position: 50% 50%; /*CENTRALIZAR A IMAGEM*/
+    background-size: 400px 400px; /*TAMANHO REAL DA IMAGEM*/
+    background-color:#ffffff;
+}
+
+/*VOLTAR A IMAGEM 03 TAMANHO NORMAL*/
+ul#album-fotos03 li#not03:hover{
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul#album-fotos03 h3{
+	margin-left:280px;
+	color:Green;
+	}
+
+
+
+
+
+/*FORMATAÇÃO DA LATERAL TAMANHO DA DIV*/
+aside{
+    margin-top: 100px;  /*OBS*/
+    display:block;
+    width: 338px;
+    float:right;
+	height: 700px;
+	margin-right:10px;
+    box-shadow:0px 0px 10px rgba(0,0,0,.6);
+	margin-bottom:10px;
+	margin-left:10px;
+	
+}
+
+
+
+/*FORMATAÇÃO DO BANNER*/
+div#controleimg{
+    margin-top: 60px;
+    margin-left:50px;
+    width: 600px;
+    height: 280px;
+    background-color: #ffffff;
+} 
+
+
+
+
+/*ABAIXAR OS SUBITENS DO MENU*/
+hgroup#abaixar{
+    margin-top: 90px;
+}
+
+
+/*FORMATA��O DA SECTION*/
+
+header#cabecalho-artigo h2{
+    font-size:20pt;
+    color:#cecece;
+	background:url("../_imagenssite/laranjaheader.jpg");
+    /*background-color:#ffffff; */
+    margin:0px;
+}
+
+/*FORMATA��O DA SECTION*/
+
+header#cabecalho-artigo h3{
+    font-size:12px;
+    color:#606060;
+}
+
+
+
+
+/*TAMANHO DA SECTION FEITO COM O ARTIGO*/
+
+article#esquerda{
+    margin-bottom:800px;
+}
+
+
+/*FORMATACAO DO ARTIGO(TODOS OS TITULOS NA SECTION)*/
+
+article#noticia-principal h2{
+    font-size:13pt;
+    color:#606060;
+    background-color:#FFA500;
+    margin:10px 0px 10px 0px;
+    padding: 5px 0px 5px 10px;
+}
+
+
+
+/*FORMATA��O DOS TITULOS DA SECTION COM UM NOVO CABE�ALHO PARA FORMATOS DIFERENTES DO ARTICLE*/
+
+header#cabecalho-artigo h1{
+    font-family:Arial, sans-serif;
+    font-size:20pt;
+    color:#606060;
+    margin-bottom:0px;
+    margin-top:0px;
+}
+
+
+/*FORMATA��O PARA A ATUALIZA��O DE 23/04/2013 FICAR A DIREITA*/
+
+.direita{
+    text-align: right;
+
+}
+
+
+
+footer#rodape{
+    clear: both;
+    border-top: 1px solid #606060;
+    /*background-color: #FFA500; */
+	background:url("../_imagenssite/degrade2.jpg");
+	padding:4px;
+}
+
+footer#rodape p{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
